@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>web‑deck — Weboldalak, amik dolgoznak helyetted</title>
+<meta name="description" content="Modern, konvertáló weboldalak fejlesztése és karbantartása. 4+ év tapasztalat, letisztult design, valódi eredmények.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🃏</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#top" class="logo">web<span class="accent">‑deck</span></a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#services">Szolgáltatások</a>
+      <a href="#work">Munkáink</a>
+      <a href="#process">Folyamat</a>
+      <a href="#about">Rólunk</a>
+      <a href="#testimonials">Vélemények</a>
+      <a href="#contact">Kapcsolat</a>
+    </nav>
+
+    <a href="#contact" class="btn btn-primary btn-magnetic">
+      <span>Ingyenes ajánlat</span>
+      <span class="btn-arrow">↗</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Menü megnyitása">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="top">
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+      <div class="hero-copy" data-reveal>
+        <span class="badge">
+          <span class="badge-dot"></span>
+          4+ ÉV TAPASZTALAT A WEBFEJLESZTÉSBEN
+        </span>
+
+        <h1 class="hero-title">
+          Weboldalak, amik<br>
+          tényleg <span class="kinetic-word-wrap"><span class="kinetic-word" id="kineticWord">eladnak</span></span>
+        </h1>
+
+        <p class="hero-sub">
+          Nem csak szép felületet építünk — olyan digitális jelenlétet, ami vonzza,
+          meggyőzi és megtartja az ügyfeleidet. Fejlesztés, dizájn és karbantartás
+          egy kézből, négy év tapasztalattal a hátunk mögött.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary btn-large btn-magnetic">
+            <span>Ingyenes ajánlatkérés</span>
+            <span class="btn-arrow">↗</span>
+          </a>
+          <a href="#work" class="btn btn-ghost btn-large">
+            <span>Nézd meg a munkáinkat</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-deck" id="heroDeck" data-reveal data-reveal-delay="1">
+        <div class="deck-card deck-card-1">
+          <div class="deck-card-bar"><span></span><span></span><span></span></div>
+          <div class="deck-card-body deck-body-1">
+            <div class="deck-line w-60"></div>
+            <div class="deck-line w-40"></div>
+            <div class="deck-block"></div>
+          </div>
+        </div>
+        <div class="deck-card deck-card-2">
+          <div class="deck-card-bar"><span></span><span></span><span></span></div>
+          <div class="deck-card-body deck-body-2">
+            <div class="deck-line w-50"></div>
+            <div class="deck-grid">
+              <div class="deck-tile"></div><div class="deck-tile"></div><div class="deck-tile"></div>
+            </div>
+          </div>
+        </div>
+        <div class="deck-card deck-card-3">
+          <div class="deck-card-bar"><span></span><span></span><span></span></div>
+          <div class="deck-card-body deck-body-3">
+            <div class="deck-line w-70"></div>
+            <div class="deck-line w-30"></div>
+            <div class="deck-circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="marquee-strip" data-reveal>
+      <div class="marquee-track">
+        <span>WordPress</span><span>·</span><span>Webflow</span><span>·</span><span>Shopify</span><span>·</span>
+        <span>React</span><span>·</span><span>SEO</span><span>·</span><span>Google Ads</span><span>·</span>
+        <span>Karbantartás</span><span>·</span><span>E-kereskedelem</span><span>·</span><span>UX/UI</span><span>·</span>
+        <span>WordPress</span><span>·</span><span>Webflow</span><span>·</span><span>Shopify</span><span>·</span>
+        <span>React</span><span>·</span><span>SEO</span><span>·</span><span>Google Ads</span><span>·</span>
+        <span>Karbantartás</span><span>·</span><span>E-kereskedelem</span><span>·</span><span>UX/UI</span><span>·</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STATS ===================== -->
+  <section class="stats">
+    <div class="stats-grid">
+      <div class="stat-item" data-reveal>
+        <strong class="count-up" data-target="4" data-suffix="+">0</strong>
+        <p>Év tapasztalat</p>
+      </div>
+      <div class="stat-item" data-reveal data-reveal-delay="1">
+        <strong class="count-up" data-target="60" data-suffix="+">0</strong>
+        <p>Elkészült projekt</p>
+      </div>
+      <div class="stat-item" data-reveal data-reveal-delay="2">
+        <strong class="count-up" data-target="98" data-suffix="%">0</strong>
+        <p>Ügyfél-elégedettség</p>
+      </div>
+      <div class="stat-item" data-reveal data-reveal-delay="3">
+        <strong class="count-up" data-target="24" data-suffix="/7">0</strong>
+        <p>Karbantartói support</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section class="services" id="services">
+    <div class="section-head" data-reveal>
+      <span class="badge badge-dark"><span class="badge-dot"></span>SZOLGÁLTATÁSOK</span>
+      <h2>Amiben <span class="accent">segítünk</span></h2>
+      <p>Egy kézből kapod a fejlesztést, a dizájnt és a folyamatos karbantartást —
+        nem kell több szolgáltatóval egyeztetned.</p>
+    </div>
+
+    <div class="services-bento">
+      <article class="service-card service-card-lg" data-reveal>
+        <div class="service-img"><img src="images/service-dev.jpg" alt="Weboldal fejlesztés" loading="lazy"></div>
+        <div class="service-content">
+          <span class="service-num">01</span>
+          <h3>Egyedi weboldal fejlesztés</h3>
+          <p>Gyors, modern és reszponzív weboldalak, amik minden eszközön tökéletesen
+            működnek — kódból építve, sablon nélkül.</p>
+          <a href="#contact" class="service-link">Részletek <span class="btn-arrow">↗</span></a>
+        </div>
+      </article>
+
+      <article class="service-card" data-reveal data-reveal-delay="1">
+        <div class="service-img"><img src="images/service-design.jpg" alt="UX/UI dizájn" loading="lazy"></div>
+        <div class="service-content">
+          <span class="service-num">02</span>
+          <h3>UX/UI Dizájn</h3>
+          <p>Letisztult, figyelemfelkeltő felületek, amik vezetik a látogatót a
+            konverzió felé.</p>
+          <a href="#contact" class="service-link">Részletek <span class="btn-arrow">↗</span></a>
+        </div>
+      </article>
+
+      <article class="service-card" data-reveal data-reveal-delay="2">
+        <div class="service-img"><img src="images/service-analytics.jpg" alt="SEO és analitika" loading="lazy"></div>
+        <div class="service-content">
+          <span class="service-num">03</span>
+          <h3>SEO &amp; Analitika</h3>
+          <p>Keresőoptimalizálás és mérhető adatok, hogy ne csak szép, de eredményes
+            is legyen az oldalad.</p>
+          <a href="#contact" class="service-link">Részletek <span class="btn-arrow">↗</span></a>
+        </div>
+      </article>
+
+      <article class="service-card service-card-lg" data-reveal data-reveal-delay="1">
+        <div class="service-img"><img src="images/service-maintenance.jpg" alt="Karbantartás és support" loading="lazy"></div>
+        <div class="service-content">
+          <span class="service-num">04</span>
+          <h3>Folyamatos karbantartás</h3>
+          <p>Frissítések, biztonsági mentések és gyors support — hogy az oldalad
+            mindig gyors, biztonságos és naprakész maradjon.</p>
+          <a href="#contact" class="service-link">Részletek <span class="btn-arrow">↗</span></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== WORK ===================== -->
+  <section class="work" id="work">
+    <div class="section-head section-head-row" data-reveal>
+      <div>
+        <span class="badge"><span class="badge-dot"></span>MUNKÁINK</span>
+        <h2>Válogatott <span class="accent">projektek</span></h2>
+      </div>
+      <a href="#contact" class="btn btn-ghost">
+        <span>Összes munka</span>
+        <span class="btn-arrow">↗</span>
+      </a>
+    </div>
+
+    <div class="work-grid">
+      <article class="work-card" data-reveal>
+        <div class="work-img"><img src="images/work-1.jpg" alt="Webfejlesztési projekt" loading="lazy"></div>
+        <div class="work-meta">
+          <div>
+            <span class="work-tag">FEJLESZTÉS</span>
+            <h3>Northline SaaS Platform</h3>
+          </div>
+          <a href="#contact" class="work-arrow" aria-label="Részletek">↗</a>
+        </div>
+      </article>
+
+      <article class="work-card" data-reveal data-reveal-delay="1">
+        <div class="work-img"><img src="images/work-2.jpg" alt="Analitikai dashboard projekt" loading="lazy"></div>
+        <div class="work-meta">
+          <div>
+            <span class="work-tag">DASHBOARD</span>
+            <h3>Vantage Analytics</h3>
+          </div>
+          <a href="#contact" class="work-arrow" aria-label="Részletek">↗</a>
+        </div>
+      </article>
+
+      <article class="work-card" data-reveal data-reveal-delay="2">
+        <div class="work-img"><img src="images/work-3.jpg" alt="UX tervezési projekt" loading="lazy"></div>
+        <div class="work-meta">
+          <div>
+            <span class="work-tag">UX DIZÁJN</span>
+            <h3>Fintra Mobile App</h3>
+          </div>
+          <a href="#contact" class="work-arrow" aria-label="Részletek">↗</a>
+        </div>
+      </article>
+
+      <article class="work-card" data-reveal data-reveal-delay="3">
+        <div class="work-img"><img src="images/work-4.jpg" alt="Fejlesztői projekt" loading="lazy"></div>
+        <div class="work-meta">
+          <div>
+            <span class="work-tag">E-KERESKEDELEM</span>
+            <h3>Loom Studio Shop</h3>
+          </div>
+          <a href="#contact" class="work-arrow" aria-label="Részletek">↗</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== PROCESS ===================== -->
+  <section class="process" id="process">
+    <div class="section-head" data-reveal>
+      <span class="badge badge-dark"><span class="badge-dot"></span>FOLYAMAT</span>
+      <h2>Hogyan <span class="accent">dolgozunk</span></h2>
+    </div>
+
+    <div class="process-timeline">
+      <div class="process-line"><div class="process-line-fill" id="processFill"></div></div>
+
+      <div class="process-step" data-reveal>
+        <span class="process-num">01</span>
+        <h3>Egyeztetés</h3>
+        <p>Megbeszéljük a céljaidat, a célközönséged és az elvárt eredményeket.</p>
+      </div>
+      <div class="process-step" data-reveal data-reveal-delay="1">
+        <span class="process-num">02</span>
+        <h3>Tervezés</h3>
+        <p>Wireframe és design terv, ami már a konverzióra épül, nem csak esztétikus.</p>
+      </div>
+      <div class="process-step" data-reveal data-reveal-delay="2">
+        <span class="process-num">03</span>
+        <h3>Fejlesztés</h3>
+        <p>Gyors, tiszta kód, mobilbarát és keresőoptimalizált felépítés.</p>
+      </div>
+      <div class="process-step" data-reveal data-reveal-delay="3">
+        <span class="process-num">04</span>
+        <h3>Indulás &amp; support</h3>
+        <p>Élesítés után is veled maradunk: karbantartás, frissítés, fejlesztés.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT (dark full-bleed) ===================== -->
+  <section class="about" id="about">
+    <div class="about-bg"><img src="images/about-dark.jpg" alt="Fejlesztői munkakörnyezet" loading="lazy"></div>
+    <div class="about-overlay"></div>
+    <div class="about-content" data-reveal>
+      <span class="badge"><span class="badge-dot"></span>RÓLUNK</span>
+      <h2>Nem ügynökség vagyunk.<br>Digitális <span class="accent">partner.</span></h2>
+      <p>4+ éve építünk és tartunk karban weboldalakat kis- és középvállalkozásoknak.
+        Nem sablonból dolgozunk, és nem tűnünk el az élesítés után — a célunk, hogy
+        a weboldalad tényleg hozza az eredményt, amiért elkészült.</p>
+      <a href="#contact" class="btn btn-primary btn-magnetic">
+        <span>Ismerjük meg egymást</span>
+        <span class="btn-arrow">↗</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="testimonials" id="testimonials">
+    <div class="section-head" data-reveal>
+      <span class="badge badge-dark"><span class="badge-dot"></span>VÉLEMÉNYEK</span>
+      <h2>Amit ügyfeleink <span class="accent">mondanak</span></h2>
+    </div>
+
+    <div class="testimonial-track-wrap">
+      <div class="testimonial-track" id="testimonialTrack">
+        <div class="testimonial-card" data-reveal>
+          <p class="testimonial-quote">„Végre egy fejlesztő csapat, aki nem tűnik el a szerződés aláírása után. Az oldalunk azóta is folyamatosan fejlődik velünk."</p>
+          <div class="testimonial-person">
+            <img src="images/testimonial-1.jpg" alt="Ügyfél" loading="lazy">
+            <div><strong>Varga Bence</strong><span>Ügyvezető</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-reveal data-reveal-delay="1">
+          <p class="testimonial-quote">„Az új oldal két hónap alatt megduplázta a megkereséseink számát. A karbantartás is gördülékeny, sosincs fennakadás."</p>
+          <div class="testimonial-person">
+            <img src="images/testimonial-2.jpg" alt="Ügyfél" loading="lazy">
+            <div><strong>Kiss Tamás</strong><span>Marketing vezető</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-reveal data-reveal-delay="2">
+          <p class="testimonial-quote">„Profi, gyors és megbízható csapat. Pontosan azt kaptuk, amit elképzeltünk — sőt, még jobbat."</p>
+          <div class="testimonial-person">
+            <img src="images/testimonial-3.jpg" alt="Ügyfél" loading="lazy">
+            <div><strong>Horváth Nóra</strong><span>Alapító</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-reveal data-reveal-delay="3">
+          <p class="testimonial-quote">„A régi oldalunk lassú és elavult volt. Az újjal nemcsak modernebbek lettünk, hanem mérhetően jobban is konvertálunk."</p>
+          <div class="testimonial-person">
+            <img src="images/testimonial-4.jpg" alt="Ügyfél" loading="lazy">
+            <div><strong>Nagy Dávid</strong><span>Termékvezető</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-controls">
+        <button class="carousel-btn" id="testPrev" aria-label="Előző">‹</button>
+        <button class="carousel-btn" id="testNext" aria-label="Következő">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="cta" id="contact">
+    <div class="cta-inner" data-reveal>
+      <h2>Készen állsz egy weboldalra,<br>ami tényleg <span class="accent">dolgozik</span> helyetted?</h2>
+      <p>Foglalj egy ingyenes, kötelezettségmentes konzultációt — nézzük meg együtt,
+        mivel tudunk segíteni.</p>
+      <a href="mailto:hello@web-deck.hu" class="btn btn-primary btn-large btn-magnetic">
+        <span>Ingyenes ajánlatkérés</span>
+        <span class="btn-arrow">↗</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <a href="#top" class="logo">web<span class="accent">‑deck</span></a>
+    <nav class="footer-nav">
+      <a href="#services">Szolgáltatások</a>
+      <a href="#work">Munkáink</a>
+      <a href="#process">Folyamat</a>
+      <a href="#about">Rólunk</a>
+      <a href="#testimonials">Vélemények</a>
+      <a href="#contact">Kapcsolat</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 web‑deck. Minden jog fenntartva.</p>
+    <p>hello@web-deck.hu · +36 30 123 4567</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
