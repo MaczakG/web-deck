@@ -449,6 +449,7 @@ section[id] { scroll-margin-top: 90px; }
   .header-inner .btn-primary { display: none; }
 
   .hero-content { padding: 0 18px 60px; }
+  .hero-title { font-size: clamp(26px, 10vw, 44px); }
   .hero-actions { flex-direction: column; align-items: flex-start; gap: 18px; }
   .hero-scroll-hint { display: none; }
 

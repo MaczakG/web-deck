@@ -76,7 +76,7 @@ if (statement && 'IntersectionObserver' in window) {
 }
 
 // ---------- Kinetic hero word ----------
-const kineticWords = ['több', 'karakteresebb', 'meggyőzőbb', 'emlékezetesebb'];
+const kineticWords = ['több.', 'karakteresebb.', 'meggyőzőbb.', 'emlékezetesebb.'];
 const kineticEl = document.getElementById('kineticWord');
 if (kineticEl) {
   let wordIndex = 0;
