@@ -224,10 +224,10 @@ section[id] { scroll-margin-top: 90px; }
 }
 .hero-content { position: relative; z-index: 1; padding: 0 var(--gutter) 90px; max-width: 1000px; }
 .hero-title { font-size: clamp(46px, 8vw, 104px); }
-.kinetic-word-wrap { display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.25; padding: 0 0.04em 0.12em 0; margin-bottom: -0.12em; }
+.kinetic-word-wrap { display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.25; padding: 0 0.04em 0.12em 0; }
 .kinetic-word { display: inline-block; line-height: 1.25; transition: transform 0.5s var(--ease), opacity 0.4s ease; }
 .kinetic-word.is-swapping { transform: translateY(-110%); opacity: 0; }
-.hero-sub { margin-top: 26px; font-size: 17px; line-height: 1.7; color: var(--text-muted); max-width: 460px; }
+.hero-sub { margin-top: 40px; font-size: 17px; line-height: 1.7; color: var(--text-muted); max-width: 460px; }
 .hero-actions { margin-top: 36px; display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
 .hero-scroll-hint {
   position: absolute; right: var(--gutter); bottom: 40px; z-index: 1;
