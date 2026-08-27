@@ -9,6 +9,19 @@ window.addEventListener('load', () => {
 // Fallback in case 'load' never fires quickly (slow fonts etc.)
 setTimeout(() => preloader?.classList.add('is-done'), 3200);
 
+// ---------- Cookie banner ----------
+const cookieBanner = document.getElementById('cookieBanner');
+const cookieAccept = document.getElementById('cookieAccept');
+if (cookieBanner && cookieAccept) {
+  if (!localStorage.getItem('webdeck-cookie-consent')) {
+    setTimeout(() => cookieBanner.classList.add('is-visible'), 1600);
+  }
+  cookieAccept.addEventListener('click', () => {
+    localStorage.setItem('webdeck-cookie-consent', 'accepted');
+    cookieBanner.classList.remove('is-visible');
+  });
+}
+
 // ---------- Wrap data-reveal-text content for slide-up reveal ----------
 document.querySelectorAll('[data-reveal-text]').forEach((el) => {
   const wrapper = document.createElement('span');

@@ -289,19 +289,38 @@ section[id] { scroll-margin-top: 90px; }
 /* ==========================================================================
    WORK (stacked, not grid)
    ========================================================================== */
-.work { padding: 60px var(--gutter) 140px; }
+.work { padding: 60px 0 0; }
+.work-heading, .work > .section-label { padding: 0 var(--gutter); }
 .work-heading { font-size: clamp(28px, 4.4vw, 52px); max-width: 900px; margin-top: 6px; }
-.work-list { margin-top: 90px; display: flex; flex-direction: column; gap: 130px; }
-.work-item { max-width: 900px; }
-.work-item-offset { margin-left: auto; }
-.work-link { display: block; }
-.work-img { height: 62vh; min-height: 340px; overflow: hidden; }
+
+/* Sticky stacked cards: each .work-item pins to the top of the viewport and
+   the next one (higher z-index) slides up over it as the user scrolls. */
+.work-list { margin-top: 70px; }
+.work-item {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  background: var(--bg);
+  padding: 0 var(--gutter);
+  border-radius: 32px 32px 0 0;
+  box-shadow: 0 -40px 70px rgba(0, 0, 0, 0.4);
+}
+.work-item:nth-child(1) { z-index: 1; }
+.work-item:nth-child(2) { z-index: 2; }
+.work-item:nth-child(3) { z-index: 3; }
+.work-item:nth-child(4) { z-index: 4; }
+.work-item:nth-child(5) { z-index: 5; }
+.work-link { display: flex; align-items: center; gap: 64px; width: 100%; height: 100%; }
+.work-img { flex: 1 1 56%; height: 68vh; max-height: 640px; border-radius: 20px; overflow: hidden; }
 .work-img img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.8) contrast(1.05) brightness(0.85); transition: transform 0.8s var(--ease), filter 0.5s ease; transform: scale(1.02); }
 .work-item:hover .work-img img { transform: scale(1.08); filter: saturate(0.95) contrast(1.05) brightness(0.9); }
-.work-info { display: flex; align-items: baseline; gap: 22px; flex-wrap: wrap; padding-top: 24px; }
+.work-info { flex: 1 1 36%; display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
 .work-index { font-family: var(--font-display); font-size: 13px; color: var(--text-muted); }
-.work-info h3 { font-size: clamp(22px, 2.6vw, 32px); }
-.work-cat { font-size: 13px; color: var(--text-muted); margin-right: auto; }
+.work-info h3 { font-size: clamp(26px, 3.2vw, 44px); }
+.work-cat { font-size: 13px; color: var(--text-muted); }
 
 /* ==========================================================================
    TRANSITION
@@ -420,6 +439,33 @@ section[id] { scroll-margin-top: 90px; }
 .footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-top: 70px; padding-top: 22px; border-top: 1px solid var(--border); font-size: 12.5px; color: var(--text-muted); }
 
 /* ==========================================================================
+   COOKIE BANNER
+   ========================================================================== */
+.cookie-banner {
+  position: fixed;
+  left: 24px; right: 24px; bottom: 24px;
+  z-index: 500;
+  max-width: 620px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px 26px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  transform: translateY(140%);
+  opacity: 0;
+  transition: transform 0.6s var(--ease), opacity 0.5s ease;
+  pointer-events: none;
+}
+.cookie-banner.is-visible { transform: translateY(0); opacity: 1; pointer-events: auto; }
+.cookie-banner p { font-size: 13.5px; line-height: 1.6; color: var(--text-muted); flex: 1 1 260px; }
+.cookie-actions { display: flex; align-items: center; gap: 20px; flex-shrink: 0; }
+.cookie-actions .btn { padding: 12px 22px; font-size: 13px; }
+
+/* ==========================================================================
    RESPONSIVE
    ========================================================================== */
 @media (max-width: 1080px) {
@@ -462,10 +508,13 @@ section[id] { scroll-margin-top: 90px; }
   .numbers { padding: 40px 18px 90px; }
   .numbers-grid { grid-template-columns: 1fr 1fr; gap: 30px 20px; }
 
-  .work { padding: 40px 18px 90px; }
-  .work-list { gap: 70px; margin-top: 50px; }
-  .work-item-offset { margin-left: 0; }
-  .work-img { height: 42vh; min-height: 240px; }
+  .work { padding: 40px 0 0; }
+  .work-heading, .work > .section-label { padding: 0 18px; }
+  .work-list { margin-top: 40px; }
+  .work-item { padding: 24px 18px; height: auto; min-height: 100vh; border-radius: 24px 24px 0 0; }
+  .work-link { flex-direction: column; align-items: flex-start; gap: 24px; }
+  .work-img { width: 100%; height: 42vh; min-height: 240px; max-height: none; }
+  .work-info { flex: none; }
 
   .transition { padding: 80px 18px; }
   .care-content { padding: 70px 18px; }
