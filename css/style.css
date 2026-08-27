@@ -303,7 +303,7 @@ section[id] { scroll-margin-top: 90px; }
   min-height: 560px;
   display: flex;
   align-items: center;
-  background: var(--bg);
+  background: var(--bg-soft);
   padding: 0 var(--gutter);
   border-radius: 32px 32px 0 0;
   box-shadow: 0 -40px 70px rgba(0, 0, 0, 0.4);
