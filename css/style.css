@@ -338,11 +338,53 @@ section[id] { scroll-margin-top: 90px; }
 .care-bg img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.6) contrast(1.1) brightness(0.45); }
 .care-overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(100deg, rgba(8, 9, 11, 0.96) 25%, rgba(8, 9, 11, 0.55) 100%); }
 .care-content { position: relative; z-index: 2; display: grid; grid-template-columns: 0.6fr 1.4fr; gap: 40px; padding: 100px var(--gutter); width: 100%; }
+.care-left { display: flex; flex-direction: column; align-items: flex-start; }
 .care-right h2 { font-size: clamp(32px, 4.6vw, 58px); }
 .care-right p { margin-top: 24px; font-size: 16px; color: var(--text-muted); max-width: 480px; }
-.care-checklist { margin-top: 34px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 30px; max-width: 560px; }
-.care-checklist li { font-size: 14.5px; padding-left: 24px; position: relative; }
-.care-checklist li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+
+.care-monitor {
+  margin-top: 36px;
+  width: 100%;
+  max-width: 240px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(6px);
+}
+.care-monitor-status { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-size: 12.5px; font-weight: 600; letter-spacing: 0.02em; color: var(--accent); }
+.dot.pulse { animation: dotPulse 2s ease-out infinite; }
+@keyframes dotPulse {
+  0% { box-shadow: 0 0 0 0 rgba(199, 255, 61, 0.55); }
+  70% { box-shadow: 0 0 0 9px rgba(199, 255, 61, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(199, 255, 61, 0); }
+}
+.care-monitor-grid { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.care-monitor-grid .label { display: block; font-size: 10.5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.care-monitor-grid .value { display: block; margin-top: 5px; font-family: var(--font-display); font-size: 19px; font-weight: 600; }
+
+.care-checklist { margin-top: 34px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px 14px; max-width: 560px; }
+.care-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 16px;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+.care-checklist li:hover { background: rgba(255, 255, 255, 0.08); border-color: rgba(199, 255, 61, 0.3); }
+.care-check {
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--accent-ink);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 800;
+  flex-shrink: 0;
+}
 .care-content .btn { margin-top: 42px; }
 
 /* ==========================================================================
