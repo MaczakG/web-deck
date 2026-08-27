@@ -468,46 +468,36 @@ section[id] { scroll-margin-top: 90px; }
 .final-cta-actions { margin-top: 42px; display: flex; align-items: center; justify-content: center; gap: 30px; flex-wrap: wrap; }
 
 /* ==========================================================================
-   STORY (projekt.html — sticky stacking cards, same technique as .work-item)
+   REFERENCIÁK (referenciak.html — sticky stacking cards, same technique as .work-item)
    ========================================================================== */
 .story-hero { padding: 170px var(--gutter) 50px; max-width: 780px; }
 .story-hero h1 { font-size: clamp(36px, 5.6vw, 68px); }
 .story-hero p { margin-top: 24px; font-size: 17px; color: var(--text-muted); max-width: 560px; }
 
-.story-list { margin-top: 40px; }
-.story-item {
+.ref-list { margin-top: 40px; }
+.ref-item {
   position: sticky;
   top: 0;
   height: 100vh;
-  min-height: 560px;
+  min-height: 620px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  overflow: hidden;
   background: var(--bg-soft);
   padding: 0 var(--gutter);
   border-radius: 32px 32px 0 0;
   box-shadow: 0 -40px 70px rgba(0, 0, 0, 0.4);
 }
-.story-item:nth-child(1) { z-index: 1; }
-.story-item:nth-child(2) { z-index: 2; }
-.story-item:nth-child(3) { z-index: 3; }
-.story-ghost-num {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(200px, 34vw, 420px);
-  color: rgba(255, 255, 255, 0.045);
-  line-height: 1;
-  pointer-events: none;
-  user-select: none;
-}
-.story-content { position: relative; z-index: 1; max-width: 640px; text-align: center; }
-.story-content .section-label { justify-content: center; }
-.story-content h2 { font-size: clamp(30px, 4vw, 52px); margin-top: 10px; }
-.story-content p { margin-top: 22px; font-size: 17px; line-height: 1.75; color: var(--text-muted); }
+.ref-item:nth-child(1) { z-index: 1; }
+.ref-item:nth-child(2) { z-index: 2; }
+.ref-item:nth-child(3) { z-index: 3; }
+.ref-link { display: flex; align-items: center; gap: 64px; width: 100%; height: 100%; }
+.ref-img { flex: 1 1 44%; height: 62vh; max-height: 560px; border-radius: 20px; overflow: hidden; }
+.ref-img img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.8) contrast(1.05) brightness(0.85); }
+.ref-body { flex: 1 1 48%; max-height: 78vh; overflow-y: auto; padding-right: 8px; }
+.ref-index { font-family: var(--font-display); font-size: 13px; color: var(--text-muted); }
+.ref-body h2 { margin-top: 10px; font-size: clamp(26px, 3.2vw, 42px); }
+.ref-cat { display: block; margin-top: 6px; font-size: 13px; color: var(--text-muted); }
+.ref-body p { margin-top: 20px; font-size: 15.5px; line-height: 1.75; color: var(--text-muted); }
 
 /* ==========================================================================
    FOOTER
@@ -601,9 +591,11 @@ section[id] { scroll-margin-top: 90px; }
   .work-info { flex: none; }
 
   .story-hero { padding: 130px 18px 40px; }
-  .story-list { margin-top: 20px; }
-  .story-item { padding: 40px 18px; height: auto; min-height: 100vh; border-radius: 24px 24px 0 0; }
-  .story-ghost-num { font-size: 30vw; }
+  .ref-list { margin-top: 20px; }
+  .ref-item { padding: 24px 18px; height: auto; min-height: 100vh; border-radius: 24px 24px 0 0; }
+  .ref-link { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .ref-img { width: 100%; height: 32vh; min-height: 200px; max-height: none; }
+  .ref-body { max-height: none; overflow-y: visible; padding-right: 0; }
 
   .transition { padding: 80px 18px; }
   .care-content { padding: 70px 18px; }
