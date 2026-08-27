@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A projekt — WEB—DECK</title>
+<meta name="description" content="Mi ez a weboldal, milyen megoldásokkal készült, és milyen igényt szolgál ki — egy rövid bepillantás a WEB—DECK saját bemutatkozó oldala mögé.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%2308090B%22/><text x=%2250%22 y=%2268%22 font-size=%2260%22 fill=%22%23C7FF3D%22 text-anchor=%22middle%22 font-family=%22monospace%22>W</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===================== PRELOADER ===================== -->
+<div class="preloader" id="preloader">
+  <span class="preloader-word">WEB<span class="accent">—</span>DECK</span>
+  <span class="preloader-line"></span>
+</div>
+
+<div class="progress-bar" id="progressBar"></div>
+<div class="cursor-bubble" id="cursorBubble"><span id="cursorBubbleText">VIEW</span></div>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html#top" class="wordmark">WEB<span class="accent">—</span>DECK</a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html#work">Munkáink</a>
+      <a href="index.html#services">Szolgáltatások</a>
+      <a href="index.html#care">Karbantartás</a>
+      <a href="projekt.html">A projekt</a>
+    </nav>
+
+    <a href="index.html#contact" class="btn btn-primary btn-magnetic">
+      <span>Kérj ajánlatot</span><span class="btn-arrow">→</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Menü megnyitása">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===================== INTRO ===================== -->
+  <section class="story-hero">
+    <div class="section-label" data-reveal><span class="dot accent-bg"></span>A PROJEKT</div>
+    <h1 data-reveal-text>Ez a weboldal is <span class="accent">egy projekt.</span></h1>
+    <p data-reveal>Nem csak bemutatjuk, amit csinálunk — ez az oldal maga a bizonyíték. Görgess lejjebb, és nézd meg, mi áll mögötte.</p>
+  </section>
+
+  <!-- ===================== STACKING STORY CARDS ===================== -->
+  <div class="story-list">
+    <article class="story-item">
+      <span class="story-ghost-num">01</span>
+      <div class="story-content" data-reveal>
+        <div class="section-label"><span class="dot accent-bg"></span>AZ IGÉNY</div>
+        <h2>Egy vitrin, ami magáért beszél.</h2>
+        <p>Ez a weboldal a WEB—DECK saját bemutatkozó felülete — pontosan azt mutatja meg, amit az ügyfeleinknek is szállítunk. Nem sablonból indultunk ki: az volt a cél, hogy egy prémium webstúdió érezhető legyen már az első görgetéstől kezdve.</p>
+      </div>
+    </article>
+
+    <article class="story-item">
+      <span class="story-ghost-num">02</span>
+      <div class="story-content" data-reveal>
+        <div class="section-label"><span class="dot accent-bg"></span>A MEGOLDÁS</div>
+        <h2>Egy folyamatos élmény, törések nélkül.</h2>
+        <p>Letisztult, sötét dizájnnal és egyetlen folyamatos oldallal dolgoztunk, hogy a látogató figyelme sose törjön meg. A kulcselemek — a kinetikus főcím, az egymásra húzott projektkártyák és a görgetésre épülő animációk — mind azt az élményt erősítik, amit egy weboldaltól elvárunk: gyors, magabiztos, emlékezetes.</p>
+      </div>
+    </article>
+
+    <article class="story-item">
+      <span class="story-ghost-num">03</span>
+      <div class="story-content" data-reveal>
+        <div class="section-label"><span class="dot accent-bg"></span>A TECHNOLÓGIA</div>
+        <h2>Semmi felesleges a háttérben.</h2>
+        <p>A háttérben nincs semmi felesleges: tiszta HTML, CSS és JavaScript, build lépések nélkül, Cloudflare éles infrastruktúrán futtatva. Ez a megközelítés garantálja, hogy az oldal villámgyors maradjon, és pontosan azt az igényt szolgálja ki, amivel elindultunk — egy weboldalt, ami nemcsak elkészül, hanem működik is.</p>
+      </div>
+    </article>
+  </div>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="final-cta" id="contact">
+    <h2 data-reveal-text>TE KÖVETKEZEL.</h2>
+    <p data-reveal>Ha a te weboldalad is így nézne ki és így működne, beszéljünk róla.</p>
+    <div class="final-cta-actions" data-reveal>
+      <a href="mailto:hello@web-deck.hu" class="btn btn-primary btn-large btn-magnetic">
+        <span>Indítsuk el a projektet</span><span class="btn-arrow">→</span>
+      </a>
+      <a href="index.html#work" class="link-underline">Vissza a munkáinkhoz</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <span class="wordmark">WEB<span class="accent">—</span>DECK</span>
+    <p>Weboldalak. Webshopok. Karbantartás.</p>
+  </div>
+  <div class="footer-grid">
+    <nav class="footer-nav">
+      <a href="index.html#work">Munkáink</a>
+      <a href="index.html#services">Szolgáltatások</a>
+      <a href="index.html#care">Karbantartás</a>
+      <a href="index.html#about">Rólunk</a>
+      <a href="projekt.html">A projekt</a>
+      <a href="index.html#contact">Kapcsolat</a>
+    </nav>
+    <nav class="footer-nav">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">LinkedIn</a>
+    </nav>
+    <nav class="footer-nav footer-nav-legal">
+      <a href="#">Impresszum</a>
+      <a href="#">Adatkezelés</a>
+      <a href="#">ÁSZF</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Web-Deck. Minden jog fenntartva.</p>
+    <p>hello@web-deck.hu</p>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner">
+  <p>Ezt a weboldalt sütik segítségével működtetjük, hogy a legjobb élményt nyújthassuk. A böngészés folytatásával elfogadod a sütik használatát.</p>
+  <div class="cookie-actions">
+    <a href="#" class="link-underline">Adatkezelés</a>
+    <button class="btn btn-primary" id="cookieAccept">Elfogadom</button>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
