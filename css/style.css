@@ -204,6 +204,31 @@ section[id] { scroll-margin-top: 90px; }
 .nav-toggle { display: none; flex-direction: column; gap: 6px; background: none; border: none; cursor: pointer; padding: 8px; }
 .nav-toggle span { width: 22px; height: 1.5px; background: var(--text); }
 
+.nav-item { position: relative; display: flex; align-items: center; gap: 4px; }
+.nav-caret {
+  background: none; border: none; cursor: pointer; padding: 4px;
+  color: var(--text-muted); font-size: 10px; line-height: 1;
+  transition: transform 0.25s var(--ease), color 0.25s ease;
+}
+.nav-caret:hover { color: var(--text); }
+.nav-item:hover .nav-caret, .nav-item.is-open .nav-caret { transform: rotate(180deg); color: var(--text); }
+.nav-dropdown {
+  position: absolute; top: 100%; left: 0; margin-top: 16px;
+  min-width: 230px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 8px;
+  display: flex; flex-direction: column; gap: 2px;
+  opacity: 0; visibility: hidden; transform: translateY(-8px);
+  transition: opacity 0.25s ease, transform 0.25s var(--ease), visibility 0.25s;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  z-index: 50;
+}
+.nav-item:hover .nav-dropdown, .nav-item.is-open .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+.nav-dropdown a { display: block; padding: 11px 14px; border-radius: 9px; font-size: 13.5px; color: var(--text-muted); }
+.nav-dropdown a:hover { background: rgba(255, 255, 255, 0.05); color: var(--text); }
+
 /* ==========================================================================
    HERO
    ========================================================================== */
@@ -583,6 +608,16 @@ section[id] { scroll-margin-top: 90px; }
   .main-nav a { padding: 14px; }
   .nav-toggle { display: flex; }
   .header-inner .btn-primary { display: none; }
+
+  .nav-item { flex-direction: column; align-items: stretch; gap: 0; }
+  .nav-caret { position: absolute; top: 2px; right: 2px; padding: 12px; }
+  .nav-dropdown {
+    position: static; margin-top: 4px; opacity: 1; visibility: visible; transform: none;
+    max-height: 0; padding: 0 0 0 14px; border: none; box-shadow: none; background: none;
+    overflow: hidden; transition: max-height 0.3s var(--ease);
+  }
+  .nav-item.is-open .nav-dropdown { max-height: 320px; padding: 4px 0 4px 14px; }
+  .nav-dropdown a { padding: 10px 14px; font-size: 13px; }
 
   .hero-content { padding: 0 18px 60px; }
   .hero-title { font-size: clamp(26px, 10vw, 44px); }

@@ -43,6 +43,26 @@ if (navToggle && mainNav) {
   });
 }
 
+// ---------- Nav dropdown (Szolgáltatások submenu) ----------
+document.querySelectorAll('.nav-item.has-dropdown').forEach((item) => {
+  const caret = item.querySelector('.nav-caret');
+  caret?.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const isOpen = item.classList.contains('is-open');
+    document.querySelectorAll('.nav-item.is-open').forEach((openItem) => {
+      if (openItem !== item) openItem.classList.remove('is-open');
+    });
+    item.classList.toggle('is-open', !isOpen);
+    caret.setAttribute('aria-expanded', String(!isOpen));
+  });
+});
+document.addEventListener('click', (e) => {
+  document.querySelectorAll('.nav-item.is-open').forEach((item) => {
+    if (!item.contains(e.target)) item.classList.remove('is-open');
+  });
+});
+
 // ---------- Sticky header + scroll progress ----------
 const header = document.getElementById('siteHeader');
 const progressBar = document.getElementById('progressBar');
