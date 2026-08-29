@@ -306,9 +306,9 @@ section[id] { scroll-margin-top: 90px; }
    ========================================================================== */
 .numbers { padding: 60px var(--gutter) 140px; }
 .numbers-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; border-top: 1px solid var(--border); padding-top: 40px; }
-.number-item { display: flex; flex-direction: column; gap: 10px; }
+.number-item { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
 .number-index { font-family: var(--font-display); font-size: 13px; color: var(--text-muted); }
-.number-item strong, .count-up-text { font-family: var(--font-display); font-size: clamp(40px, 5vw, 64px); font-weight: 600; }
+.number-item strong, .count-up-text { font-family: var(--font-display); font-size: clamp(40px, 5vw, 64px); font-weight: 600; overflow-wrap: break-word; }
 .number-item p { font-size: 14px; color: var(--text-muted); max-width: 200px; }
 
 /* ==========================================================================
