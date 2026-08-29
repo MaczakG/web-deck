@@ -567,6 +567,7 @@ section[id] { scroll-margin-top: 90px; }
 .cs-hero-visual .browser-mock img { height: auto; max-height: 480px; border-radius: 0; box-shadow: none; }
 
 /* ---- stats card (scoped modifier over the shared .numbers/.numbers-grid/.number-item) ---- */
+.case-stats { max-width: 1200px; margin: 0 auto; }
 .case-stats .numbers-grid { grid-template-columns: repeat(3, 1fr); border: 1px solid var(--border); border-radius: 24px; padding-top: 0; }
 .case-stats .number-item { padding: 34px 36px; position: relative; }
 .case-stats .number-item:not(:first-child)::before { content: ""; position: absolute; left: 0; top: 34px; bottom: 34px; width: 1px; background: var(--border); }
