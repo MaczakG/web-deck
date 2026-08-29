@@ -46,58 +46,105 @@
 
 <main>
 
+  <!-- ===================== BREADCRUMB ===================== -->
+  <nav class="cs-breadcrumb" data-reveal aria-label="Morzsamenü">
+    <a href="index.html#top">Kezdőlap</a><span class="sep">/</span>
+    <a href="referenciak.html">Referenciák</a><span class="sep">/</span>
+    <span class="current">Café Harmonic</span>
+  </nav>
+
   <!-- ===================== CASE HERO ===================== -->
-  <section class="case-hero">
-    <a href="referenciak.html" class="case-back link-underline" data-reveal>← Vissza a referenciákhoz</a>
-    <div class="section-label" data-reveal><span class="dot accent-bg"></span>REFERENCIA — PROJEKT 01</div>
-    <h1 data-reveal-text>Café Harmonic</h1>
-    <span class="case-cat">Web Design / Development</span>
+  <section class="cs-hero">
+    <div class="cs-hero-grid">
+      <div class="cs-hero-copy">
+        <div class="section-label" data-reveal><span class="dot accent-bg"></span>REFERENCIA — PROJEKT 01</div>
+        <h1 data-reveal-text>Café Harmonic</h1>
+        <span class="cs-hero-tag" data-reveal>Web Design / Development</span>
+        <p class="cs-hero-desc" data-reveal>Fotó-központú weboldal egy induló kávézólánc számára — hangulatos, gyors és mobilon is kifogástalan élménnyel.</p>
+        <div class="cs-hero-actions" data-reveal>
+          <a href="index.html#contact" class="btn btn-primary btn-magnetic">
+            <span>Indítsuk el a projektet</span><span class="btn-arrow">→</span>
+          </a>
+          <a href="referenciak.html" class="btn btn-outline">További referenciák</a>
+        </div>
+        <ul class="cs-hero-features" data-reveal>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="18" x2="12" y2="21"></line></svg>Reszponzív design</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 11 14 10 22 21 9 13 9 13 2"></polygon></svg>Gyors betöltés</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"></line><circle cx="9" cy="6" r="2"></circle><line x1="4" y1="12" x2="20" y2="12"></line><circle cx="16" cy="12" r="2"></circle><line x1="4" y1="18" x2="20" y2="18"></line><circle cx="10" cy="18" r="2"></circle></svg>Könnyen kezelhető</li>
+        </ul>
+      </div>
+      <div class="cs-hero-visual" data-reveal>
+        <img src="images/portfolio-architecture.jpg" alt="Café Harmonic weboldal projekt">
+      </div>
+    </div>
   </section>
 
-  <div class="case-cover" data-reveal>
-    <img src="images/portfolio-architecture.jpg" alt="Café Harmonic weboldal projekt">
-  </div>
-
-  <section class="numbers">
+  <section class="numbers case-stats">
     <div class="section-label" data-reveal><span class="dot accent-bg"></span>EREDMÉNYEK</div>
     <div class="numbers-grid">
       <div class="number-item" data-reveal>
-        <span class="number-index">01</span>
+        <span class="number-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></span>
         <strong class="count-up" data-target="40" data-suffix="%">0</strong>
         <p>több online asztalfoglalás</p>
       </div>
       <div class="number-item" data-reveal data-reveal-delay="1">
-        <span class="number-index">02</span>
+        <span class="number-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15.5 14"></polyline></svg></span>
         <strong class="count-up-text">&lt;1s</strong>
         <p>betöltési idő mobilon</p>
       </div>
       <div class="number-item" data-reveal data-reveal-delay="2">
-        <span class="number-index">03</span>
+        <span class="number-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="18" x2="12" y2="21"></line></svg></span>
         <strong class="count-up" data-target="100" data-suffix="%">0</strong>
         <p>mobilbarát élmény</p>
       </div>
     </div>
   </section>
 
-  <div class="case-body">
-    <h2 class="case-subhead" data-reveal>A kihívás</h2>
-    <p data-reveal>A Café Harmonic egy induló kávézólánc volt, amelynek addig nem volt saját, professzionális arca az interneten. A cél egy olyan weboldal volt, amely azonnal átadja a hely hangulatát, és egyszerűen navigálható az étlaphoz és a foglaláshoz.</p>
-  </div>
+  <!-- ===================== PROJEKTRŐL ===================== -->
+  <section class="case-project">
+    <div class="case-project-grid">
+      <div class="case-project-copy">
+        <div class="section-label" data-reveal><span class="dot accent-bg"></span>PROJEKTRŐL</div>
+        <h2 data-reveal-text>Egy weboldal, ami első pillantásra megnyeri a vendégeket</h2>
+        <p data-reveal>A Café Harmonic egy induló kávézólánc, amelynek a digitális jelenléte ugyanolyan hangulatos kellett legyen, mint maga a hely.</p>
+        <ul class="case-feature-list">
+          <li data-reveal>
+            <span class="case-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></span>
+            <div>
+              <h3>A kihívás</h3>
+              <p>A Café Harmonic egy induló kávézólánc volt, amelynek addig nem volt saját, professzionális arca az interneten.</p>
+            </div>
+          </li>
+          <li data-reveal data-reveal-delay="1">
+            <span class="case-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.3h6c0-1 .4-1.8 1-2.3A7 7 0 0 0 12 2Z"></path></svg></span>
+            <div>
+              <h3>A megoldás</h3>
+              <p>Letisztult, fotó-központú design, ahol a tipográfia és az üres tér ugyanolyan fontos, mint a képek — kiemelt figyelemmel a mobil sebességre.</p>
+            </div>
+          </li>
+          <li data-reveal data-reveal-delay="2">
+            <span class="case-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.1V12a10 10 0 1 1-5.9-9.1"></path><polyline points="22 4 12 14.1 9 11.1"></polyline></svg></span>
+            <div>
+              <h3>Az eredmény</h3>
+              <p>Az online asztalfoglalások száma jelentősen megnőtt, a látogatók pedig átlagosan tovább maradtak az oldalon.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="case-project-image" data-reveal>
+        <img src="images/portfolio-tech.jpg" alt="Café Harmonic — reszponzív felület" loading="lazy">
+      </div>
+    </div>
+  </section>
 
-  <div class="case-body">
-    <h2 class="case-subhead" data-reveal>A megoldás</h2>
-    <p data-reveal>Letisztult, fotó-központú design mellett döntöttünk, ahol a tipográfia és az üres tér ugyanolyan fontos szerepet kap, mint maguk a képek. A fejlesztés során kiemelt figyelmet fordítottunk a betöltési sebességre, hiszen a vendégek jellemzően mobilról, útközben keresik fel az oldalt.</p>
-  </div>
-
-  <div class="case-body">
-    <h2 class="case-subhead" data-reveal>Az eredmény</h2>
-    <p data-reveal>Az élesítés után az online asztalfoglalások száma jelentősen megnőtt, a látogatók pedig átlagosan tovább maradtak az oldalon. A projekt azóta is a havidíjas karbantartási csomagunk része, így a menü és a nyitvatartás mindig naprakész.</p>
-  </div>
-
-  <div class="case-gallery">
-    <img src="images/portfolio-tech.jpg" alt="Café Harmonic — reszponzív felület" loading="lazy" data-reveal>
-    <img src="images/hero-bg.jpg" alt="Café Harmonic — fejlesztés közben" loading="lazy" data-reveal>
-  </div>
+  <!-- ===================== GALLERY ===================== -->
+  <section class="case-gallery-section">
+    <div class="section-label" data-reveal><span class="dot accent-bg"></span>PROJEKT KÉPEK</div>
+    <div class="case-gallery">
+      <img src="images/hero-bg.jpg" alt="Café Harmonic — fejlesztés közben" loading="lazy" data-reveal>
+      <img src="images/monitoring-screen.jpg" alt="Café Harmonic — teljesítmény és sebesség" loading="lazy" data-reveal data-reveal-delay="1">
+    </div>
+  </section>
 
   <div class="case-cta" data-reveal>
     <a href="index.html#contact" class="btn btn-primary btn-large btn-magnetic">
@@ -107,9 +154,9 @@
   </div>
 
   <nav class="case-nav">
-    <a href="noir-atelier.html" class="case-nav-link case-nav-prev">
+    <a href="life4padel.html" class="case-nav-link case-nav-prev">
       <span class="case-nav-label">← Előző projekt</span>
-      <span class="case-nav-title">Noir Atelier</span>
+      <span class="case-nav-title">Life4Padel</span>
     </a>
     <a href="final-table.html" class="case-nav-link case-nav-next">
       <span class="case-nav-label">Következő projekt →</span>

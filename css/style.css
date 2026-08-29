@@ -518,34 +518,82 @@ section[id] { scroll-margin-top: 90px; }
 .ref-card:hover .ref-card-cta { opacity: 1; transform: translateY(0); }
 @media (hover: none) { .ref-card-cta { opacity: 1; transform: none; } }
 
-.ref-card.is-soon { cursor: default; }
-.ref-card-badge {
-  position: absolute; top: 18px; right: 18px; z-index: 2;
-  font-family: var(--font-display); font-size: 11px; font-weight: 600; letter-spacing: 0.04em;
-  color: var(--text-muted);
-  background: rgba(8, 9, 11, 0.7);
-  border: 1px solid var(--border);
-  padding: 6px 12px; border-radius: 999px;
-}
-.ref-card.is-soon .ref-card-cta { color: var(--text-muted); }
-
 /* ==========================================================================
-   CASE STUDY (individual project subpages — cafe-harmonic.html, final-table.html, noir-atelier.html)
+   CASE STUDY (individual project subpages — cafe-harmonic.html, final-table.html, life4padel.html)
+   NOTE: .case-hero / .case-cat / .case-cover / .case-body / .case-cta below are
+   also used by webshop-fejlesztes.html — keep those rules untouched. The
+   redesigned case-study template uses its own .cs-* / .case-project /
+   .case-stats / .browser-mock classes instead of extending the shared ones.
    ========================================================================== */
 .case-hero { padding: 170px var(--gutter) 0; max-width: 900px; }
-.case-back { display: inline-block; margin-bottom: 20px; font-size: 13px; color: var(--text-muted); }
 .case-hero h1 { margin-top: 10px; font-size: clamp(34px, 5.4vw, 60px); }
 .case-cat { display: block; margin-top: 14px; font-size: 14px; color: var(--text-muted); }
 .case-cover { margin: 46px auto 0; max-width: 1200px; padding: 0 var(--gutter); }
 .case-cover img { width: 100%; height: 58vh; min-height: 320px; max-height: 620px; object-fit: cover; border-radius: 24px; filter: saturate(0.85) contrast(1.05) brightness(0.88); }
 .case-body { max-width: 720px; margin: 56px auto 0; padding: 0 var(--gutter); }
-.case-subhead { font-size: clamp(20px, 2.4vw, 28px); }
 .case-body p { margin-top: 20px; font-size: 17px; line-height: 1.85; color: var(--text-muted); }
-.case-gallery { margin: 60px auto 0; max-width: 1200px; padding: 0 var(--gutter); display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.case-gallery img { width: 100%; height: 320px; object-fit: cover; border-radius: 18px; filter: saturate(0.85) contrast(1.05) brightness(0.88); }
 .case-cta { max-width: 720px; margin: 70px auto 0; padding: 0 var(--gutter) 100px; display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
 
-.case-nav { margin: 40px auto 0; max-width: 1200px; padding: 40px var(--gutter); border-top: 1px solid var(--border); display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+/* ---- browser-chrome mockup (case-study hero visual + gallery) ---- */
+.browser-mock { border-radius: 16px; overflow: hidden; border: 1px solid var(--border); background: var(--bg-soft); box-shadow: 0 50px 100px -30px rgba(0, 0, 0, 0.55); }
+.browser-mock-bar { display: flex; align-items: center; gap: 6px; padding: 12px 16px; background: #15171b; border-bottom: 1px solid var(--border); }
+.browser-mock-bar .browser-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(245, 245, 240, 0.16); }
+.browser-mock-url { margin-left: 8px; font-size: 12px; color: var(--text-muted); background: rgba(245, 245, 240, 0.05); padding: 5px 14px; border-radius: 999px; }
+.browser-mock img { width: 100%; display: block; object-fit: cover; filter: saturate(0.85) contrast(1.05) brightness(0.92); }
+
+/* ---- outline button (secondary CTA) ---- */
+.btn-outline { background: transparent; border-color: var(--border); color: var(--text); }
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ---- breadcrumb ---- */
+.cs-breadcrumb { max-width: 1200px; margin: 0 auto; padding: 130px var(--gutter) 0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); }
+.cs-breadcrumb a { color: var(--text-muted); transition: color 0.2s ease; }
+.cs-breadcrumb a:hover { color: var(--accent); }
+.cs-breadcrumb .sep { color: var(--border); }
+.cs-breadcrumb .current { color: var(--text); }
+
+/* ---- redesigned hero (two-column: copy + browser mockup) ---- */
+.cs-hero { max-width: 1200px; margin: 0 auto; padding: 26px var(--gutter) 0; }
+.cs-hero-grid { display: grid; grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr); gap: 64px; align-items: center; }
+.cs-hero-copy h1 { margin-top: 14px; font-size: clamp(34px, 4.4vw, 52px); }
+.cs-hero-tag { display: block; margin-top: 14px; font-size: 14px; color: var(--text-muted); }
+.cs-hero-desc { margin-top: 16px; font-size: 17px; line-height: 1.75; color: var(--text-muted); max-width: 460px; }
+.cs-hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
+.cs-hero-features { display: flex; flex-wrap: wrap; gap: 20px 30px; margin-top: 42px; padding-top: 28px; border-top: 1px solid var(--border); }
+.cs-hero-features li { display: flex; align-items: center; gap: 9px; font-size: 13.5px; color: var(--text-muted); }
+.cs-hero-features svg { width: 18px; height: 18px; color: var(--accent); flex-shrink: 0; }
+.cs-hero-visual img { width: 100%; display: block; height: 460px; object-fit: cover; border-radius: 16px; filter: saturate(0.85) contrast(1.05) brightness(0.88); box-shadow: 0 50px 100px -30px rgba(0, 0, 0, 0.55); }
+.cs-hero-visual .browser-mock { box-shadow: 0 50px 100px -30px rgba(0, 0, 0, 0.55); }
+.cs-hero-visual .browser-mock img { height: auto; max-height: 480px; border-radius: 0; box-shadow: none; }
+
+/* ---- stats card (scoped modifier over the shared .numbers/.numbers-grid/.number-item) ---- */
+.case-stats .numbers-grid { grid-template-columns: repeat(3, 1fr); border: 1px solid var(--border); border-radius: 24px; padding-top: 0; }
+.case-stats .number-item { padding: 34px 36px; position: relative; }
+.case-stats .number-item:not(:first-child)::before { content: ""; position: absolute; left: 0; top: 34px; bottom: 34px; width: 1px; background: var(--border); }
+.number-icon { width: 40px; height: 40px; border-radius: 12px; background: rgba(199, 255, 61, 0.08); display: flex; align-items: center; justify-content: center; color: var(--accent); margin-bottom: 6px; }
+.number-icon svg { width: 20px; height: 20px; }
+
+/* ---- projektről: copy + icon list / image ---- */
+.case-project { max-width: 1200px; margin: 90px auto 0; padding: 0 var(--gutter); }
+.case-project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: stretch; }
+.case-project-copy h2 { margin-top: 10px; font-size: clamp(26px, 3.2vw, 38px); }
+.case-project-copy > p { margin-top: 18px; font-size: 16px; line-height: 1.8; color: var(--text-muted); max-width: 480px; }
+.case-feature-list { margin-top: 40px; display: flex; flex-direction: column; gap: 28px; }
+.case-feature-list li { display: flex; gap: 18px; align-items: flex-start; }
+.case-feature-icon { flex-shrink: 0; width: 44px; height: 44px; border-radius: 12px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--accent); }
+.case-feature-icon svg { width: 20px; height: 20px; }
+.case-feature-list h3 { font-size: 16px; font-weight: 600; }
+.case-feature-list p { margin-top: 6px; font-size: 14.5px; line-height: 1.7; color: var(--text-muted); }
+.case-project-image { border-radius: 20px; overflow: hidden; min-height: 360px; }
+.case-project-image img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.85) contrast(1.05) brightness(0.9); }
+
+/* ---- gallery ---- */
+.case-gallery-section { max-width: 1200px; margin: 90px auto 0; padding: 0 var(--gutter); }
+.case-gallery { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.case-gallery > img { width: 100%; height: 320px; object-fit: cover; border-radius: 18px; filter: saturate(0.85) contrast(1.05) brightness(0.88); }
+.case-gallery .browser-mock img { height: 280px; }
+
+.case-nav { margin: 0 auto; max-width: 1200px; padding: 40px var(--gutter); border-top: 1px solid var(--border); display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
 .case-nav-link { display: flex; flex-direction: column; gap: 6px; }
 .case-nav-next { text-align: right; align-items: flex-end; }
 .case-nav-label { font-size: 12px; color: var(--text-muted); transition: color 0.2s ease; }
@@ -604,6 +652,14 @@ section[id] { scroll-margin-top: 90px; }
   .about { grid-template-columns: 1fr; }
   .numbers-grid { grid-template-columns: repeat(2, 1fr); row-gap: 40px; }
   .service-preview { display: none; }
+
+  .cs-hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .cs-hero-visual .browser-mock img { max-height: 340px; }
+  .case-project-grid { grid-template-columns: 1fr; gap: 40px; }
+  .case-project-image { min-height: 260px; }
+  .case-stats .numbers-grid { grid-template-columns: 1fr; }
+  .case-stats .number-item:not(:first-child)::before { display: none; }
+  .case-stats .number-item:not(:first-child) { border-top: 1px solid var(--border); }
 }
 
 @media (max-width: 760px) {
@@ -662,11 +718,21 @@ section[id] { scroll-margin-top: 90px; }
   .case-cover { padding: 0 18px; margin-top: 30px; }
   .case-cover img { height: 34vh; min-height: 220px; border-radius: 18px; }
   .case-body { padding: 0 18px; margin-top: 36px; }
-  .case-gallery { padding: 0 18px; grid-template-columns: 1fr; margin-top: 36px; gap: 16px; }
-  .case-gallery img { height: 220px; }
   .case-cta { padding: 0 18px 70px; margin-top: 46px; }
   .case-nav { padding: 32px 18px; }
   .case-nav-next { text-align: left; align-items: flex-start; }
+
+  .cs-breadcrumb { padding: 130px 18px 0; }
+  .cs-hero { padding: 20px 18px 0; }
+  .cs-hero-actions { flex-direction: column; align-items: flex-start; }
+  .cs-hero-features { gap: 16px 24px; }
+  .cs-hero-visual img { height: 240px; }
+  .case-project { padding: 0 18px; margin-top: 56px; }
+  .case-project-grid { gap: 32px; }
+  .case-gallery-section { padding: 0 18px; margin-top: 56px; }
+  .case-gallery { grid-template-columns: 1fr; gap: 16px; }
+  .case-gallery > img { height: 220px; }
+  .case-gallery .browser-mock img { height: 220px; }
 
   .transition { padding: 80px 18px; }
   .care-content { padding: 70px 18px; }
