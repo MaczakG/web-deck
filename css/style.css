@@ -518,6 +518,17 @@ section[id] { scroll-margin-top: 90px; }
 .ref-card:hover .ref-card-cta { opacity: 1; transform: translateY(0); }
 @media (hover: none) { .ref-card-cta { opacity: 1; transform: none; } }
 
+.ref-card.is-soon { cursor: default; }
+.ref-card-badge {
+  position: absolute; top: 18px; right: 18px; z-index: 2;
+  font-family: var(--font-display); font-size: 11px; font-weight: 600; letter-spacing: 0.04em;
+  color: var(--text-muted);
+  background: rgba(8, 9, 11, 0.7);
+  border: 1px solid var(--border);
+  padding: 6px 12px; border-radius: 999px;
+}
+.ref-card.is-soon .ref-card-cta { color: var(--text-muted); }
+
 /* ==========================================================================
    CASE STUDY (individual project subpages — cafe-harmonic.html, final-table.html, noir-atelier.html)
    ========================================================================== */
